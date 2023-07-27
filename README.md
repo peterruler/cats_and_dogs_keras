@@ -81,7 +81,7 @@ to get testdata register & download https://www.kaggle.com/competitions/dogs-vs-
 https://www.tensorflow.org/guide/keras/serialization_and_saving
 
 
-don't call any of the two following command:
+don't call any of the two following commands:
 neither
 
 `pip install tf-nightly keras-nightly`

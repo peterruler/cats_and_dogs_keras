@@ -10,7 +10,7 @@ Explanation: https://github.com/jeffheaton/t81_558_deep_learning/blob/master/ins
 
 https://github.com/jeffheaton/t81_558_deep_learning/blob/master/install/tensorflow-install-mac-metal-jan-2023.ipynb
 
-- remove anaconda if previously installed
+remove anaconda if previously installed
 
 https://docs.anaconda.com/free/anaconda/install/uninstall/
 
@@ -44,8 +44,6 @@ platform.platform() #enter
 
 ` /Users/<USERNAME>/miniconda3/bin/jupyter notebook`
 
-(`/Users/peterstroessler/miniconda3/bin/jupyter`)
-
 `conda deactivate` vs. (base) `activate pytorch`
 
 `conda env create -f tensorflow-apple-metal.yml -n tensorflow`
@@ -72,16 +70,27 @@ to get testdata register & download https://www.kaggle.com/competitions/dogs-vs-
 
 `brew install pydot` did the job for me
 
+ otherwise try `conda install pydot`
+
 `conda install graphviz` did the job for me
 
 # save model in keras
 
 https://www.tensorflow.org/guide/keras/serialization_and_saving
 
+
+don't call any of the two following command:
+neither
+
 `pip install tf-nightly keras-nightly`
+
+nor
+
 `pip install tfp-nightly`
 
 # uninstall miniconda
+ (in case yout damadged sth.)
+
 ```
 conda activate your_conda_env_name
 conda install anaconda-clean
@@ -94,5 +103,9 @@ source ~/.bashrc
 ```
 
 # save & load model
+
+I chose json serialisation, which works great.
+
+Also save & load the models' weights as well.
 
 https://machinelearningmastery.com/save-load-keras-deep-learning-models/
